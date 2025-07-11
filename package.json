@@ -1,0 +1,26 @@
+{
+  "name": "playwrightapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:report": "npx playwright test --reporter=html",
+    "show-report": "npx playwright show-report",
+    "test:ci": "npx playwright test --reporter=list,junit,json",
+    "clean:reports": "rimraf playwright-report test-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.0",
+    "@types/node": "^24.0.13",
+    "ajv": "^8.17.1",
+    "dotenv": "^17.2.0",
+    "playwright": "^1.54.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

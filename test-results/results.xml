@@ -1,0 +1,1196 @@
+<testsuites id="" name="" tests="8" failures="1" skipped="0" errors="0" time="4.447951">
+<testsuite name="api-crud.spec.ts" timestamp="2025-07-11T07:44:35.858Z" hostname="API Tests" tests="4" failures="0" skipped="0" time="1.986" errors="0">
+<testcase name="API CRUD Operations (Robust) › GET /posts returns posts array" classname="api-crud.spec.ts" time="0.571">
+<system-out>
+<![CDATA[[API REQUEST] GET /posts
+[API RESPONSE] Status: 200
+Headers: {
+  date: [32m'Fri, 11 Jul 2025 07:44:37 GMT'[39m,
+  [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+  [32m'transfer-encoding'[39m: [32m'chunked'[39m,
+  connection: [32m'keep-alive'[39m,
+  [32m'access-control-allow-credentials'[39m: [32m'true'[39m,
+  [32m'cache-control'[39m: [32m'max-age=43200'[39m,
+  [32m'content-encoding'[39m: [32m'gzip'[39m,
+  etag: [32m'W/"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM"'[39m,
+  expires: [32m'-1'[39m,
+  nel: [32m'{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'[39m,
+  pragma: [32m'no-cache'[39m,
+  [32m'report-to'[39m: [32m'{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=EAC8Ru8lCYe3alaNGsW%2F27CFx8C3VSUDYB3txmr6vZs%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1749874148"}],"max_age":3600}'[39m,
+  [32m'reporting-endpoints'[39m: [32m'heroku-nel="https://nel.heroku.com/reports?s=EAC8Ru8lCYe3alaNGsW%2F27CFx8C3VSUDYB3txmr6vZs%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1749874148"'[39m,
+  server: [32m'cloudflare'[39m,
+  vary: [32m'Origin, Accept-Encoding'[39m,
+  via: [32m'2.0 heroku-router'[39m,
+  [32m'x-content-type-options'[39m: [32m'nosniff'[39m,
+  [32m'x-powered-by'[39m: [32m'Express'[39m,
+  [32m'x-ratelimit-limit'[39m: [32m'1000'[39m,
+  [32m'x-ratelimit-remaining'[39m: [32m'999'[39m,
+  [32m'x-ratelimit-reset'[39m: [32m'1749874170'[39m,
+  age: [32m'12900'[39m,
+  [32m'cf-cache-status'[39m: [32m'HIT'[39m,
+  [32m'cf-ray'[39m: [32m'95d6ad3d59694c90-AMS'[39m,
+  [32m'alt-svc'[39m: [32m'h3=":443"; ma=86400'[39m
+}
+Body: [
+  {
+    userId: [33m1[39m,
+    id: [33m1[39m,
+    title: [32m'sunt aut facere repellat provident occaecati excepturi optio reprehenderit'[39m,
+    body: [32m'quia et suscipit\n'[39m +
+      [32m'suscipit recusandae consequuntur expedita et cum\n'[39m +
+      [32m'reprehenderit molestiae ut ut quas totam\n'[39m +
+      [32m'nostrum rerum est autem sunt rem eveniet architecto'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m2[39m,
+    title: [32m'qui est esse'[39m,
+    body: [32m'est rerum tempore vitae\n'[39m +
+      [32m'sequi sint nihil reprehenderit dolor beatae ea dolores neque\n'[39m +
+      [32m'fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\n'[39m +
+      [32m'qui aperiam non debitis possimus qui neque nisi nulla'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m3[39m,
+    title: [32m'ea molestias quasi exercitationem repellat qui ipsa sit aut'[39m,
+    body: [32m'et iusto sed quo iure\n'[39m +
+      [32m'voluptatem occaecati omnis eligendi aut ad\n'[39m +
+      [32m'voluptatem doloribus vel accusantium quis pariatur\n'[39m +
+      [32m'molestiae porro eius odio et labore et velit aut'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m4[39m,
+    title: [32m'eum et est occaecati'[39m,
+    body: [32m'ullam et saepe reiciendis voluptatem adipisci\n'[39m +
+      [32m'sit amet autem assumenda provident rerum culpa\n'[39m +
+      [32m'quis hic commodi nesciunt rem tenetur doloremque ipsam iure\n'[39m +
+      [32m'quis sunt voluptatem rerum illo velit'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m5[39m,
+    title: [32m'nesciunt quas odio'[39m,
+    body: [32m'repudiandae veniam quaerat sunt sed\n'[39m +
+      [32m'alias aut fugiat sit autem sed est\n'[39m +
+      [32m'voluptatem omnis possimus esse voluptatibus quis\n'[39m +
+      [32m'est aut tenetur dolor neque'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m6[39m,
+    title: [32m'dolorem eum magni eos aperiam quia'[39m,
+    body: [32m'ut aspernatur corporis harum nihil quis provident sequi\n'[39m +
+      [32m'mollitia nobis aliquid molestiae\n'[39m +
+      [32m'perspiciatis et ea nemo ab reprehenderit accusantium quas\n'[39m +
+      [32m'voluptate dolores velit et doloremque molestiae'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m7[39m,
+    title: [32m'magnam facilis autem'[39m,
+    body: [32m'dolore placeat quibusdam ea quo vitae\n'[39m +
+      [32m'magni quis enim qui quis quo nemo aut saepe\n'[39m +
+      [32m'quidem repellat excepturi ut quia\n'[39m +
+      [32m'sunt ut sequi eos ea sed quas'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m8[39m,
+    title: [32m'dolorem dolore est ipsam'[39m,
+    body: [32m'dignissimos aperiam dolorem qui eum\n'[39m +
+      [32m'facilis quibusdam animi sint suscipit qui sint possimus cum\n'[39m +
+      [32m'quaerat magni maiores excepturi\n'[39m +
+      [32m'ipsam ut commodi dolor voluptatum modi aut vitae'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m9[39m,
+    title: [32m'nesciunt iure omnis dolorem tempora et accusantium'[39m,
+    body: [32m'consectetur animi nesciunt iure dolore\n'[39m +
+      [32m'enim quia ad\n'[39m +
+      [32m'veniam autem ut quam aut nobis\n'[39m +
+      [32m'et est aut quod aut provident voluptas autem voluptas'[39m
+  },
+  {
+    userId: [33m1[39m,
+    id: [33m10[39m,
+    title: [32m'optio molestias id quia eum'[39m,
+    body: [32m'quo et expedita modi cum officia vel magni\n'[39m +
+      [32m'doloribus qui repudiandae\n'[39m +
+      [32m'vero nisi sit\n'[39m +
+      [32m'quos veniam quod sed accusamus veritatis error'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m11[39m,
+    title: [32m'et ea vero quia laudantium autem'[39m,
+    body: [32m'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\n'[39m +
+      [32m'accusamus in eum beatae sit\n'[39m +
+      [32m'vel qui neque voluptates ut commodi qui incidunt\n'[39m +
+      [32m'ut animi commodi'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m12[39m,
+    title: [32m'in quibusdam tempore odit est dolorem'[39m,
+    body: [32m'itaque id aut magnam\n'[39m +
+      [32m'praesentium quia et ea odit et ea voluptas et\n'[39m +
+      [32m'sapiente quia nihil amet occaecati quia id voluptatem\n'[39m +
+      [32m'incidunt ea est distinctio odio'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m13[39m,
+    title: [32m'dolorum ut in voluptas mollitia et saepe quo animi'[39m,
+    body: [32m'aut dicta possimus sint mollitia voluptas commodi quo doloremque\n'[39m +
+      [32m'iste corrupti reiciendis voluptatem eius rerum\n'[39m +
+      [32m'sit cumque quod eligendi laborum minima\n'[39m +
+      [32m'perferendis recusandae assumenda consectetur porro architecto ipsum ipsam'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m14[39m,
+    title: [32m'voluptatem eligendi optio'[39m,
+    body: [32m'fuga et accusamus dolorum perferendis illo voluptas\n'[39m +
+      [32m'non doloremque neque facere\n'[39m +
+      [32m'ad qui dolorum molestiae beatae\n'[39m +
+      [32m'sed aut voluptas totam sit illum'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m15[39m,
+    title: [32m'eveniet quod temporibus'[39m,
+    body: [32m'reprehenderit quos placeat\n'[39m +
+      [32m'velit minima officia dolores impedit repudiandae molestiae nam\n'[39m +
+      [32m'voluptas recusandae quis delectus\n'[39m +
+      [32m'officiis harum fugiat vitae'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m16[39m,
+    title: [32m'sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio'[39m,
+    body: [32m'suscipit nam nisi quo aperiam aut\n'[39m +
+      [32m'asperiores eos fugit maiores voluptatibus quia\n'[39m +
+      [32m'voluptatem quis ullam qui in alias quia est\n'[39m +
+      [32m'consequatur magni mollitia accusamus ea nisi voluptate dicta'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m17[39m,
+    title: [32m'fugit voluptas sed molestias voluptatem provident'[39m,
+    body: [32m'eos voluptas et aut odit natus earum\n'[39m +
+      [32m'aspernatur fuga molestiae ullam\n'[39m +
+      [32m'deserunt ratione qui eos\n'[39m +
+      [32m'qui nihil ratione nemo velit ut aut id quo'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m18[39m,
+    title: [32m'voluptate et itaque vero tempora molestiae'[39m,
+    body: [32m'eveniet quo quis\n'[39m +
+      [32m'laborum totam consequatur non dolor\n'[39m +
+      [32m'ut et est repudiandae\n'[39m +
+      [32m'est voluptatem vel debitis et magnam'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m19[39m,
+    title: [32m'adipisci placeat illum aut reiciendis qui'[39m,
+    body: [32m'illum quis cupiditate provident sit magnam\n'[39m +
+      [32m'ea sed aut omnis\n'[39m +
+      [32m'veniam maiores ullam consequatur atque\n'[39m +
+      [32m'adipisci quo iste expedita sit quos voluptas'[39m
+  },
+  {
+    userId: [33m2[39m,
+    id: [33m20[39m,
+    title: [32m'doloribus ad provident suscipit at'[39m,
+    body: [32m'qui consequuntur ducimus possimus quisquam amet similique\n'[39m +
+      [32m'suscipit porro ipsam amet\n'[39m +
+      [32m'eos veritatis officiis exercitationem vel fugit aut necessitatibus totam\n'[39m +
+      [32m'omnis rerum consequatur expedita quidem cumque explicabo'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m21[39m,
+    title: [32m'asperiores ea ipsam voluptatibus modi minima quia sint'[39m,
+    body: [32m'repellat aliquid praesentium dolorem quo\n'[39m +
+      [32m'sed totam minus non itaque\n'[39m +
+      [32m'nihil labore molestiae sunt dolor eveniet hic recusandae veniam\n'[39m +
+      [32m'tempora et tenetur expedita sunt'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m22[39m,
+    title: [32m'dolor sint quo a velit explicabo quia nam'[39m,
+    body: [32m'eos qui et ipsum ipsam suscipit aut\n'[39m +
+      [32m'sed omnis non odio\n'[39m +
+      [32m'expedita earum mollitia molestiae aut atque rem suscipit\n'[39m +
+      [32m'nam impedit esse'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m23[39m,
+    title: [32m'maxime id vitae nihil numquam'[39m,
+    body: [32m'veritatis unde neque eligendi\n'[39m +
+      [32m'quae quod architecto quo neque vitae\n'[39m +
+      [32m'est illo sit tempora doloremque fugit quod\n'[39m +
+      [32m'et et vel beatae sequi ullam sed tenetur perspiciatis'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m24[39m,
+    title: [32m'autem hic labore sunt dolores incidunt'[39m,
+    body: [32m'enim et ex nulla\n'[39m +
+      [32m'omnis voluptas quia qui\n'[39m +
+      [32m'voluptatem consequatur numquam aliquam sunt\n'[39m +
+      [32m'totam recusandae id dignissimos aut sed asperiores deserunt'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m25[39m,
+    title: [32m'rem alias distinctio quo quis'[39m,
+    body: [32m'ullam consequatur ut\n'[39m +
+      [32m'omnis quis sit vel consequuntur\n'[39m +
+      [32m'ipsa eligendi ipsum molestiae et omnis error nostrum\n'[39m +
+      [32m'molestiae illo tempore quia et distinctio'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m26[39m,
+    title: [32m'est et quae odit qui non'[39m,
+    body: [32m'similique esse doloribus nihil accusamus\n'[39m +
+      [32m'omnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\n'[39m +
+      [32m'perspiciatis cum ut laudantium\n'[39m +
+      [32m'omnis aut molestiae vel vero'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m27[39m,
+    title: [32m'quasi id et eos tenetur aut quo autem'[39m,
+    body: [32m'eum sed dolores ipsam sint possimus debitis occaecati\n'[39m +
+      [32m'debitis qui qui et\n'[39m +
+      [32m'ut placeat enim earum aut odit facilis\n'[39m +
+      [32m'consequatur suscipit necessitatibus rerum sed inventore temporibus consequatur'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m28[39m,
+    title: [32m'delectus ullam et corporis nulla voluptas sequi'[39m,
+    body: [32m'non et quaerat ex quae ad maiores\n'[39m +
+      [32m'maiores recusandae totam aut blanditiis mollitia quas illo\n'[39m +
+      [32m'ut voluptatibus voluptatem\n'[39m +
+      [32m'similique nostrum eum'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m29[39m,
+    title: [32m'iusto eius quod necessitatibus culpa ea'[39m,
+    body: [32m'odit magnam ut saepe sed non qui\n'[39m +
+      [32m'tempora atque nihil\n'[39m +
+      [32m'accusamus illum doloribus illo dolor\n'[39m +
+      [32m'eligendi repudiandae odit magni similique sed cum maiores'[39m
+  },
+  {
+    userId: [33m3[39m,
+    id: [33m30[39m,
+    title: [32m'a quo magni similique perferendis'[39m,
+    body: [32m'alias dolor cumque\n'[39m +
+      [32m'impedit blanditiis non eveniet odio maxime\n'[39m +
+      [32m'blanditiis amet eius quis tempora quia autem rem\n'[39m +
+      [32m'a provident perspiciatis quia'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m31[39m,
+    title: [32m'ullam ut quidem id aut vel consequuntur'[39m,
+    body: [32m'debitis eius sed quibusdam non quis consectetur vitae\n'[39m +
+      [32m'impedit ut qui consequatur sed aut in\n'[39m +
+      [32m'quidem sit nostrum et maiores adipisci atque\n'[39m +
+      [32m'quaerat voluptatem adipisci repudiandae'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m32[39m,
+    title: [32m'doloremque illum aliquid sunt'[39m,
+    body: [32m'deserunt eos nobis asperiores et hic\n'[39m +
+      [32m'est debitis repellat molestiae optio\n'[39m +
+      [32m'nihil ratione ut eos beatae quibusdam distinctio maiores\n'[39m +
+      [32m'earum voluptates et aut adipisci ea maiores voluptas maxime'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m33[39m,
+    title: [32m'qui explicabo molestiae dolorem'[39m,
+    body: [32m'rerum ut et numquam laborum odit est sit\n'[39m +
+      [32m'id qui sint in\n'[39m +
+      [32m'quasi tenetur tempore aperiam et quaerat qui in\n'[39m +
+      [32m'rerum officiis sequi cumque quod'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m34[39m,
+    title: [32m'magnam ut rerum iure'[39m,
+    body: [32m'ea velit perferendis earum ut voluptatem voluptate itaque iusto\n'[39m +
+      [32m'totam pariatur in\n'[39m +
+      [32m'nemo voluptatem voluptatem autem magni tempora minima in\n'[39m +
+      [32m'est distinctio qui assumenda accusamus dignissimos officia nesciunt nobis'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m35[39m,
+    title: [32m'id nihil consequatur molestias animi provident'[39m,
+    body: [32m'nisi error delectus possimus ut eligendi vitae\n'[39m +
+      [32m'placeat eos harum cupiditate facilis reprehenderit voluptatem beatae\n'[39m +
+      [32m'modi ducimus quo illum voluptas eligendi\n'[39m +
+      [32m'et nobis quia fugit'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m36[39m,
+    title: [32m'fuga nam accusamus voluptas reiciendis itaque'[39m,
+    body: [32m'ad mollitia et omnis minus architecto odit\n'[39m +
+      [32m'voluptas doloremque maxime aut non ipsa qui alias veniam\n'[39m +
+      [32m'blanditiis culpa aut quia nihil cumque facere et occaecati\n'[39m +
+      [32m'qui aspernatur quia eaque ut aperiam inventore'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m37[39m,
+    title: [32m'provident vel ut sit ratione est'[39m,
+    body: [32m'debitis et eaque non officia sed nesciunt pariatur vel\n'[39m +
+      [32m'voluptatem iste vero et ea\n'[39m +
+      [32m'numquam aut expedita ipsum nulla in\n'[39m +
+      [32m'voluptates omnis consequatur aut enim officiis in quam qui'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m38[39m,
+    title: [32m'explicabo et eos deleniti nostrum ab id repellendus'[39m,
+    body: [32m'animi esse sit aut sit nesciunt assumenda eum voluptas\n'[39m +
+      [32m'quia voluptatibus provident quia necessitatibus ea\n'[39m +
+      [32m'rerum repudiandae quia voluptatem delectus fugit aut id quia\n'[39m +
+      [32m'ratione optio eos iusto veniam iure'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m39[39m,
+    title: [32m'eos dolorem iste accusantium est eaque quam'[39m,
+    body: [32m'corporis rerum ducimus vel eum accusantium\n'[39m +
+      [32m'maxime aspernatur a porro possimus iste omnis\n'[39m +
+      [32m'est in deleniti asperiores fuga aut\n'[39m +
+      [32m'voluptas sapiente vel dolore minus voluptatem incidunt ex'[39m
+  },
+  {
+    userId: [33m4[39m,
+    id: [33m40[39m,
+    title: [32m'enim quo cumque'[39m,
+    body: [32m'ut voluptatum aliquid illo tenetur nemo sequi quo facilis\n'[39m +
+      [32m'ipsum rem optio mollitia quas\n'[39m +
+      [32m'voluptatem eum voluptas qui\n'[39m +
+      [32m'unde omnis voluptatem iure quasi maxime voluptas nam'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m41[39m,
+    title: [32m'non est facere'[39m,
+    body: [32m'molestias id nostrum\n'[39m +
+      [32m'excepturi molestiae dolore omnis repellendus quaerat saepe\n'[39m +
+      [32m'consectetur iste quaerat tenetur asperiores accusamus ex ut\n'[39m +
+      [32m'nam quidem est ducimus sunt debitis saepe'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m42[39m,
+    title: [32m'commodi ullam sint et excepturi error explicabo praesentium voluptas'[39m,
+    body: [32m'odio fugit voluptatum ducimus earum autem est incidunt voluptatem\n'[39m +
+      [32m'odit reiciendis aliquam sunt sequi nulla dolorem\n'[39m +
+      [32m'non facere repellendus voluptates quia\n'[39m +
+      [32m'ratione harum vitae ut'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m43[39m,
+    title: [32m'eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis'[39m,
+    body: [32m'similique fugit est\n'[39m +
+      [32m'illum et dolorum harum et voluptate eaque quidem\n'[39m +
+      [32m'exercitationem quos nam commodi possimus cum odio nihil nulla\n'[39m +
+      [32m'dolorum exercitationem magnam ex et a et distinctio debitis'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m44[39m,
+    title: [32m'optio dolor molestias sit'[39m,
+    body: [32m'temporibus est consectetur dolore\n'[39m +
+      [32m'et libero debitis vel velit laboriosam quia\n'[39m +
+      [32m'ipsum quibusdam qui itaque fuga rem aut\n'[39m +
+      [32m'ea et iure quam sed maxime ut distinctio quae'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m45[39m,
+    title: [32m'ut numquam possimus omnis eius suscipit laudantium iure'[39m,
+    body: [32m'est natus reiciendis nihil possimus aut provident\n'[39m +
+      [32m'ex et dolor\n'[39m +
+      [32m'repellat pariatur est\n'[39m +
+      [32m'nobis rerum repellendus dolorem autem'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m46[39m,
+    title: [32m'aut quo modi neque nostrum ducimus'[39m,
+    body: [32m'voluptatem quisquam iste\n'[39m +
+      [32m'voluptatibus natus officiis facilis dolorem\n'[39m +
+      [32m'quis quas ipsam\n'[39m +
+      [32m'vel et voluptatum in aliquid'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m47[39m,
+    title: [32m'quibusdam cumque rem aut deserunt'[39m,
+    body: [32m'voluptatem assumenda ut qui ut cupiditate aut impedit veniam\n'[39m +
+      [32m'occaecati nemo illum voluptatem laudantium\n'[39m +
+      [32m'molestiae beatae rerum ea iure soluta nostrum\n'[39m +
+      [32m'eligendi et voluptate'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m48[39m,
+    title: [32m'ut voluptatem illum ea doloribus itaque eos'[39m,
+    body: [32m'voluptates quo voluptatem facilis iure occaecati\n'[39m +
+      [32m'vel assumenda rerum officia et\n'[39m +
+      [32m'illum perspiciatis ab deleniti\n'[39m +
+      [32m'laudantium repellat ad ut et autem reprehenderit'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m49[39m,
+    title: [32m'laborum non sunt aut ut assumenda perspiciatis voluptas'[39m,
+    body: [32m'inventore ab sint\n'[39m +
+      [32m'natus fugit id nulla sequi architecto nihil quaerat\n'[39m +
+      [32m'eos tenetur in in eum veritatis non\n'[39m +
+      [32m'quibusdam officiis aspernatur cumque aut commodi aut'[39m
+  },
+  {
+    userId: [33m5[39m,
+    id: [33m50[39m,
+    title: [32m'repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem'[39m,
+    body: [32m'error suscipit maxime adipisci consequuntur recusandae\n'[39m +
+      [32m'voluptas eligendi et est et voluptates\n'[39m +
+      [32m'quia distinctio ab amet quaerat molestiae et vitae\n'[39m +
+      [32m'adipisci impedit sequi nesciunt quis consectetur'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m51[39m,
+    title: [32m'soluta aliquam aperiam consequatur illo quis voluptas'[39m,
+    body: [32m'sunt dolores aut doloribus\n'[39m +
+      [32m'dolore doloribus voluptates tempora et\n'[39m +
+      [32m'doloremque et quo\n'[39m +
+      [32m'cum asperiores sit consectetur dolorem'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m52[39m,
+    title: [32m'qui enim et consequuntur quia animi quis voluptate quibusdam'[39m,
+    body: [32m'iusto est quibusdam fuga quas quaerat molestias\n'[39m +
+      [32m'a enim ut sit accusamus enim\n'[39m +
+      [32m'temporibus iusto accusantium provident architecto\n'[39m +
+      [32m'soluta esse reprehenderit qui laborum'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m53[39m,
+    title: [32m'ut quo aut ducimus alias'[39m,
+    body: [32m'minima harum praesentium eum rerum illo dolore\n'[39m +
+      [32m'quasi exercitationem rerum nam\n'[39m +
+      [32m'porro quis neque quo\n'[39m +
+      [32m'consequatur minus dolor quidem veritatis sunt non explicabo similique'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m54[39m,
+    title: [32m'sit asperiores ipsam eveniet odio non quia'[39m,
+    body: [32m'totam corporis dignissimos\n'[39m +
+      [32m'vitae dolorem ut occaecati accusamus\n'[39m +
+      [32m'ex velit deserunt\n'[39m +
+      [32m'et exercitationem vero incidunt corrupti mollitia'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m55[39m,
+    title: [32m'sit vel voluptatem et non libero'[39m,
+    body: [32m'debitis excepturi ea perferendis harum libero optio\n'[39m +
+      [32m'eos accusamus cum fuga ut sapiente repudiandae\n'[39m +
+      [32m'et ut incidunt omnis molestiae\n'[39m +
+      [32m'nihil ut eum odit'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m56[39m,
+    title: [32m'qui et at rerum necessitatibus'[39m,
+    body: [32m'aut est omnis dolores\n'[39m +
+      [32m'neque rerum quod ea rerum velit pariatur beatae excepturi\n'[39m +
+      [32m'et provident voluptas corrupti\n'[39m +
+      [32m'corporis harum reprehenderit dolores eligendi'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m57[39m,
+    title: [32m'sed ab est est'[39m,
+    body: [32m'at pariatur consequuntur earum quidem\n'[39m +
+      [32m'quo est laudantium soluta voluptatem\n'[39m +
+      [32m'qui ullam et est\n'[39m +
+      [32m'et cum voluptas voluptatum repellat est'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m58[39m,
+    title: [32m'voluptatum itaque dolores nisi et quasi'[39m,
+    body: [32m'veniam voluptatum quae adipisci id\n'[39m +
+      [32m'et id quia eos ad et dolorem\n'[39m +
+      [32m'aliquam quo nisi sunt eos impedit error\n'[39m +
+      [32m'ad similique veniam'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m59[39m,
+    title: [32m'qui commodi dolor at maiores et quis id accusantium'[39m,
+    body: [32m'perspiciatis et quam ea autem temporibus non voluptatibus qui\n'[39m +
+      [32m'beatae a earum officia nesciunt dolores suscipit voluptas et\n'[39m +
+      [32m'animi doloribus cum rerum quas et magni\n'[39m +
+      [32m'et hic ut ut commodi expedita sunt'[39m
+  },
+  {
+    userId: [33m6[39m,
+    id: [33m60[39m,
+    title: [32m'consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere'[39m,
+    body: [32m'asperiores sunt ab assumenda cumque modi velit\n'[39m +
+      [32m'qui esse omnis\n'[39m +
+      [32m'voluptate et fuga perferendis voluptas\n'[39m +
+      [32m'illo ratione amet aut et omnis'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m61[39m,
+    title: [32m'voluptatem doloribus consectetur est ut ducimus'[39m,
+    body: [32m'ab nemo optio odio\n'[39m +
+      [32m'delectus tenetur corporis similique nobis repellendus rerum omnis facilis\n'[39m +
+      [32m'vero blanditiis debitis in nesciunt doloribus dicta dolores\n'[39m +
+      [32m'magnam minus velit'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m62[39m,
+    title: [32m'beatae enim quia vel'[39m,
+    body: [32m'enim aspernatur illo distinctio quae praesentium\n'[39m +
+      [32m'beatae alias amet delectus qui voluptate distinctio\n'[39m +
+      [32m'odit sint accusantium autem omnis\n'[39m +
+      [32m'quo molestiae omnis ea eveniet optio'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m63[39m,
+    title: [32m'voluptas blanditiis repellendus animi ducimus error sapiente et suscipit'[39m,
+    body: [32m'enim adipisci aspernatur nemo\n'[39m +
+      [32m'numquam omnis facere dolorem dolor ex quis temporibus incidunt\n'[39m +
+      [32m'ab delectus culpa quo reprehenderit blanditiis asperiores\n'[39m +
+      [32m'accusantium ut quam in voluptatibus voluptas ipsam dicta'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m64[39m,
+    title: [32m'et fugit quas eum in in aperiam quod'[39m,
+    body: [32m'id velit blanditiis\n'[39m +
+      [32m'eum ea voluptatem\n'[39m +
+      [32m'molestiae sint occaecati est eos perspiciatis\n'[39m +
+      [32m'incidunt a error provident eaque aut aut qui'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m65[39m,
+    title: [32m'consequatur id enim sunt et et'[39m,
+    body: [32m'voluptatibus ex esse\n'[39m +
+      [32m'sint explicabo est aliquid cumque adipisci fuga repellat labore\n'[39m +
+      [32m'molestiae corrupti ex saepe at asperiores et perferendis\n'[39m +
+      [32m'natus id esse incidunt pariatur'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m66[39m,
+    title: [32m'repudiandae ea animi iusto'[39m,
+    body: [32m'officia veritatis tenetur vero qui itaque\n'[39m +
+      [32m'sint non ratione\n'[39m +
+      [32m'sed et ut asperiores iusto eos molestiae nostrum\n'[39m +
+      [32m'veritatis quibusdam et nemo iusto saepe'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m67[39m,
+    title: [32m'aliquid eos sed fuga est maxime repellendus'[39m,
+    body: [32m'reprehenderit id nostrum\n'[39m +
+      [32m'voluptas doloremque pariatur sint et accusantium quia quod aspernatur\n'[39m +
+      [32m'et fugiat amet\n'[39m +
+      [32m'non sapiente et consequatur necessitatibus molestiae'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m68[39m,
+    title: [32m'odio quis facere architecto reiciendis optio'[39m,
+    body: [32m'magnam molestiae perferendis quisquam\n'[39m +
+      [32m'qui cum reiciendis\n'[39m +
+      [32m'quaerat animi amet hic inventore\n'[39m +
+      [32m'ea quia deleniti quidem saepe porro velit'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m69[39m,
+    title: [32m'fugiat quod pariatur odit minima'[39m,
+    body: [32m'officiis error culpa consequatur modi asperiores et\n'[39m +
+      [32m'dolorum assumenda voluptas et vel qui aut vel rerum\n'[39m +
+      [32m'voluptatum quisquam perspiciatis quia rerum consequatur totam quas\n'[39m +
+      [32m'sequi commodi repudiandae asperiores et saepe a'[39m
+  },
+  {
+    userId: [33m7[39m,
+    id: [33m70[39m,
+    title: [32m'voluptatem laborum magni'[39m,
+    body: [32m'sunt repellendus quae\n'[39m +
+      [32m'est asperiores aut deleniti esse accusamus repellendus quia aut\n'[39m +
+      [32m'quia dolorem unde\n'[39m +
+      [32m'eum tempora esse dolore'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m71[39m,
+    title: [32m'et iusto veniam et illum aut fuga'[39m,
+    body: [32m'occaecati a doloribus\n'[39m +
+      [32m'iste saepe consectetur placeat eum voluptate dolorem et\n'[39m +
+      [32m'qui quo quia voluptas\n'[39m +
+      [32m'rerum ut id enim velit est perferendis'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m72[39m,
+    title: [32m'sint hic doloribus consequatur eos non id'[39m,
+    body: [32m'quam occaecati qui deleniti consectetur\n'[39m +
+      [32m'consequatur aut facere quas exercitationem aliquam hic voluptas\n'[39m +
+      [32m'neque id sunt ut aut accusamus\n'[39m +
+      [32m'sunt consectetur expedita inventore velit'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m73[39m,
+    title: [32m'consequuntur deleniti eos quia temporibus ab aliquid at'[39m,
+    body: [32m'voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabo\n'[39m +
+      [32m'aut eum minima consequatur\n'[39m +
+      [32m'tempore cumque quae est et\n'[39m +
+      [32m'et in consequuntur voluptatem voluptates aut'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m74[39m,
+    title: [32m'enim unde ratione doloribus quas enim ut sit sapiente'[39m,
+    body: [32m'odit qui et et necessitatibus sint veniam\n'[39m +
+      [32m'mollitia amet doloremque molestiae commodi similique magnam et quam\n'[39m +
+      [32m'blanditiis est itaque\n'[39m +
+      [32m'quo et tenetur ratione occaecati molestiae tempora'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m75[39m,
+    title: [32m'dignissimos eum dolor ut enim et delectus in'[39m,
+    body: [32m'commodi non non omnis et voluptas sit\n'[39m +
+      [32m'autem aut nobis magnam et sapiente voluptatem\n'[39m +
+      [32m'et laborum repellat qui delectus facilis temporibus\n'[39m +
+      [32m'rerum amet et nemo voluptate expedita adipisci error dolorem'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m76[39m,
+    title: [32m'doloremque officiis ad et non perferendis'[39m,
+    body: [32m'ut animi facere\n'[39m +
+      [32m'totam iusto tempore\n'[39m +
+      [32m'molestiae eum aut et dolorem aperiam\n'[39m +
+      [32m'quaerat recusandae totam odio'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m77[39m,
+    title: [32m'necessitatibus quasi exercitationem odio'[39m,
+    body: [32m'modi ut in nulla repudiandae dolorum nostrum eos\n'[39m +
+      [32m'aut consequatur omnis\n'[39m +
+      [32m'ut incidunt est omnis iste et quam\n'[39m +
+      [32m'voluptates sapiente aliquam asperiores nobis amet corrupti repudiandae provident'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m78[39m,
+    title: [32m'quam voluptatibus rerum veritatis'[39m,
+    body: [32m'nobis facilis odit tempore cupiditate quia\n'[39m +
+      [32m'assumenda doloribus rerum qui ea\n'[39m +
+      [32m'illum et qui totam\n'[39m +
+      [32m'aut veniam repellendus'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m79[39m,
+    title: [32m'pariatur consequatur quia magnam autem omnis non amet'[39m,
+    body: [32m'libero accusantium et et facere incidunt sit dolorem\n'[39m +
+      [32m'non excepturi qui quia sed laudantium\n'[39m +
+      [32m'quisquam molestiae ducimus est\n'[39m +
+      [32m'officiis esse molestiae iste et quos'[39m
+  },
+  {
+    userId: [33m8[39m,
+    id: [33m80[39m,
+    title: [32m'labore in ex et explicabo corporis aut quas'[39m,
+    body: [32m'ex quod dolorem ea eum iure qui provident amet\n'[39m +
+      [32m'quia qui facere excepturi et repudiandae\n'[39m +
+      [32m'asperiores molestias provident\n'[39m +
+      [32m'minus incidunt vero fugit rerum sint sunt excepturi provident'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m81[39m,
+    title: [32m'tempora rem veritatis voluptas quo dolores vero'[39m,
+    body: [32m'facere qui nesciunt est voluptatum voluptatem nisi\n'[39m +
+      [32m'sequi eligendi necessitatibus ea at rerum itaque\n'[39m +
+      [32m'harum non ratione velit laboriosam quis consequuntur\n'[39m +
+      [32m'ex officiis minima doloremque voluptas ut aut'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m82[39m,
+    title: [32m'laudantium voluptate suscipit sunt enim enim'[39m,
+    body: [32m'ut libero sit aut totam inventore sunt\n'[39m +
+      [32m'porro sint qui sunt molestiae\n'[39m +
+      [32m'consequatur cupiditate qui iste ducimus adipisci\n'[39m +
+      [32m'dolor enim assumenda soluta laboriosam amet iste delectus hic'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m83[39m,
+    title: [32m'odit et voluptates doloribus alias odio et'[39m,
+    body: [32m'est molestiae facilis quis tempora numquam nihil qui\n'[39m +
+      [32m'voluptate sapiente consequatur est qui\n'[39m +
+      [32m'necessitatibus autem aut ipsa aperiam modi dolore numquam\n'[39m +
+      [32m'reprehenderit eius rem quibusdam'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m84[39m,
+    title: [32m'optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut'[39m,
+    body: [32m'sint molestiae magni a et quos\n'[39m +
+      [32m'eaque et quasi\n'[39m +
+      [32m'ut rerum debitis similique veniam\n'[39m +
+      [32m'recusandae dignissimos dolor incidunt consequatur odio'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m85[39m,
+    title: [32m'dolore veritatis porro provident adipisci blanditiis et sunt'[39m,
+    body: [32m'similique sed nisi voluptas iusto omnis\n'[39m +
+      [32m'mollitia et quo\n'[39m +
+      [32m'assumenda suscipit officia magnam sint sed tempora\n'[39m +
+      [32m'enim provident pariatur praesentium atque animi amet ratione'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m86[39m,
+    title: [32m'placeat quia et porro iste'[39m,
+    body: [32m'quasi excepturi consequatur iste autem temporibus sed molestiae beatae\n'[39m +
+      [32m'et quaerat et esse ut\n'[39m +
+      [32m'voluptatem occaecati et vel explicabo autem\n'[39m +
+      [32m'asperiores pariatur deserunt optio'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m87[39m,
+    title: [32m'nostrum quis quasi placeat'[39m,
+    body: [32m'eos et molestiae\n'[39m +
+      [32m'nesciunt ut a\n'[39m +
+      [32m'dolores perspiciatis repellendus repellat aliquid\n'[39m +
+      [32m'magnam sint rem ipsum est'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m88[39m,
+    title: [32m'sapiente omnis fugit eos'[39m,
+    body: [32m'consequatur omnis est praesentium\n'[39m +
+      [32m'ducimus non iste\n'[39m +
+      [32m'neque hic deserunt\n'[39m +
+      [32m'voluptatibus veniam cum et rerum sed'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m89[39m,
+    title: [32m'sint soluta et vel magnam aut ut sed qui'[39m,
+    body: [32m'repellat aut aperiam totam temporibus autem et\n'[39m +
+      [32m'architecto magnam ut\n'[39m +
+      [32m'consequatur qui cupiditate rerum quia soluta dignissimos nihil iure\n'[39m +
+      [32m'tempore quas est'[39m
+  },
+  {
+    userId: [33m9[39m,
+    id: [33m90[39m,
+    title: [32m'ad iusto omnis odit dolor voluptatibus'[39m,
+    body: [32m'minus omnis soluta quia\n'[39m +
+      [32m'qui sed adipisci voluptates illum ipsam voluptatem\n'[39m +
+      [32m'eligendi officia ut in\n'[39m +
+      [32m'eos soluta similique molestias praesentium blanditiis'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m91[39m,
+    title: [32m'aut amet sed'[39m,
+    body: [32m'libero voluptate eveniet aperiam sed\n'[39m +
+      [32m'sunt placeat suscipit molestias\n'[39m +
+      [32m'similique fugit nam natus\n'[39m +
+      [32m'expedita consequatur consequatur dolores quia eos et placeat'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m92[39m,
+    title: [32m'ratione ex tenetur perferendis'[39m,
+    body: [32m'aut et excepturi dicta laudantium sint rerum nihil\n'[39m +
+      [32m'laudantium et at\n'[39m +
+      [32m'a neque minima officia et similique libero et\n'[39m +
+      [32m'commodi voluptate qui'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m93[39m,
+    title: [32m'beatae soluta recusandae'[39m,
+    body: [32m'dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam\n'[39m +
+      [32m'voluptatem quis enim recusandae ut sed sunt\n'[39m +
+      [32m'nostrum est odit totam\n'[39m +
+      [32m'sit error sed sunt eveniet provident qui nulla'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m94[39m,
+    title: [32m'qui qui voluptates illo iste minima'[39m,
+    body: [32m'aspernatur expedita soluta quo ab ut similique\n'[39m +
+      [32m'expedita dolores amet\n'[39m +
+      [32m'sed temporibus distinctio magnam saepe deleniti\n'[39m +
+      [32m'omnis facilis nam ipsum natus sint similique omnis'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m95[39m,
+    title: [32m'id minus libero illum nam ad officiis'[39m,
+    body: [32m'earum voluptatem facere provident blanditiis velit laboriosam\n'[39m +
+      [32m'pariatur accusamus odio saepe\n'[39m +
+      [32m'cumque dolor qui a dicta ab doloribus consequatur omnis\n'[39m +
+      [32m'corporis cupiditate eaque assumenda ad nesciunt'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m96[39m,
+    title: [32m'quaerat velit veniam amet cupiditate aut numquam ut sequi'[39m,
+    body: [32m'in non odio excepturi sint eum\n'[39m +
+      [32m'labore voluptates vitae quia qui et\n'[39m +
+      [32m'inventore itaque rerum\n'[39m +
+      [32m'veniam non exercitationem delectus aut'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m97[39m,
+    title: [32m'quas fugiat ut perspiciatis vero provident'[39m,
+    body: [32m'eum non blanditiis soluta porro quibusdam voluptas\n'[39m +
+      [32m'vel voluptatem qui placeat dolores qui velit aut\n'[39m +
+      [32m'vel inventore aut cumque culpa explicabo aliquid at\n'[39m +
+      [32m'perspiciatis est et voluptatem dignissimos dolor itaque sit nam'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m98[39m,
+    title: [32m'laboriosam dolor voluptates'[39m,
+    body: [32m'doloremque ex facilis sit sint culpa\n'[39m +
+      [32m'soluta assumenda eligendi non ut eius\n'[39m +
+      [32m'sequi ducimus vel quasi\n'[39m +
+      [32m'veritatis est dolores'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m99[39m,
+    title: [32m'temporibus sit alias delectus eligendi possimus magni'[39m,
+    body: [32m'quo deleniti praesentium dicta non quod\n'[39m +
+      [32m'aut est molestias\n'[39m +
+      [32m'molestias et officia quis nihil\n'[39m +
+      [32m'itaque dolorem quia'[39m
+  },
+  {
+    userId: [33m10[39m,
+    id: [33m100[39m,
+    title: [32m'at nam consequatur ea labore ea harum'[39m,
+    body: [32m'cupiditate quo est a modi nesciunt soluta\n'[39m +
+      [32m'ipsa voluptas error itaque dicta in\n'[39m +
+      [32m'autem qui minus magnam et distinctio eum\n'[39m +
+      [32m'accusamus ratione error aut'[39m
+  }
+]
+]]>
+</system-out>
+</testcase>
+<testcase name="API CRUD Operations (Robust) › POST /posts creates a post" classname="api-crud.spec.ts" time="0.558">
+<system-out>
+<![CDATA[[API REQUEST] POST /posts
+Body: { title: [32m'json file title'[39m, body: [32m'json file body'[39m, userId: [33m2[39m }
+[API RESPONSE] Status: 201
+Headers: {
+  date: [32m'Fri, 11 Jul 2025 07:44:38 GMT'[39m,
+  [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+  [32m'content-length'[39m: [32m'88'[39m,
+  connection: [32m'keep-alive'[39m,
+  [32m'access-control-allow-credentials'[39m: [32m'true'[39m,
+  [32m'access-control-expose-headers'[39m: [32m'Location'[39m,
+  [32m'cache-control'[39m: [32m'no-cache'[39m,
+  etag: [32m'W/"58-tEFYcD76gT5XMhMw4Jn3XNSydR4"'[39m,
+  expires: [32m'-1'[39m,
+  location: [32m'https://jsonplaceholder.typicode.com/posts/101'[39m,
+  nel: [32m'{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'[39m,
+  pragma: [32m'no-cache'[39m,
+  [32m'report-to'[39m: [32m'{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=H3prswkYfV285KGnLYLy1isXJgJ51tlT14C2MBNvvVs%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1752219878"}],"max_age":3600}'[39m,
+  [32m'reporting-endpoints'[39m: [32m'heroku-nel="https://nel.heroku.com/reports?s=H3prswkYfV285KGnLYLy1isXJgJ51tlT14C2MBNvvVs%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1752219878"'[39m,
+  server: [32m'cloudflare'[39m,
+  vary: [32m'Origin, X-HTTP-Method-Override, Accept-Encoding'[39m,
+  via: [32m'2.0 heroku-router'[39m,
+  [32m'x-content-type-options'[39m: [32m'nosniff'[39m,
+  [32m'x-powered-by'[39m: [32m'Express'[39m,
+  [32m'x-ratelimit-limit'[39m: [32m'1000'[39m,
+  [32m'x-ratelimit-remaining'[39m: [32m'998'[39m,
+  [32m'x-ratelimit-reset'[39m: [32m'1752219900'[39m,
+  [32m'cf-cache-status'[39m: [32m'DYNAMIC'[39m,
+  [32m'cf-ray'[39m: [32m'95d6ad3e9b894c90-AMS'[39m,
+  [32m'alt-svc'[39m: [32m'h3=":443"; ma=86400'[39m
+}
+Body: {
+  title: [32m'json file title'[39m,
+  body: [32m'json file body'[39m,
+  userId: [33m2[39m,
+  id: [33m101[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="API CRUD Operations (Robust) › PATCH /posts/1 updates a post" classname="api-crud.spec.ts" time="0.279">
+<system-out>
+<![CDATA[[API REQUEST] PATCH /posts/1
+Body: { title: [32m'patched title'[39m }
+[API RESPONSE] Status: 200
+Headers: {
+  date: [32m'Fri, 11 Jul 2025 07:44:38 GMT'[39m,
+  [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+  [32m'transfer-encoding'[39m: [32m'chunked'[39m,
+  connection: [32m'keep-alive'[39m,
+  [32m'access-control-allow-credentials'[39m: [32m'true'[39m,
+  [32m'cache-control'[39m: [32m'no-cache'[39m,
+  etag: [32m'W/"e7-BCN5GIhsYGcdIkBmSfV7TBBRT9Q"'[39m,
+  expires: [32m'-1'[39m,
+  nel: [32m'{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'[39m,
+  pragma: [32m'no-cache'[39m,
+  [32m'report-to'[39m: [32m'{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=H3prswkYfV285KGnLYLy1isXJgJ51tlT14C2MBNvvVs%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1752219878"}],"max_age":3600}'[39m,
+  [32m'reporting-endpoints'[39m: [32m'heroku-nel="https://nel.heroku.com/reports?s=H3prswkYfV285KGnLYLy1isXJgJ51tlT14C2MBNvvVs%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1752219878"'[39m,
+  server: [32m'cloudflare'[39m,
+  vary: [32m'Origin, Accept-Encoding'[39m,
+  via: [32m'2.0 heroku-router'[39m,
+  [32m'x-content-type-options'[39m: [32m'nosniff'[39m,
+  [32m'x-powered-by'[39m: [32m'Express'[39m,
+  [32m'x-ratelimit-limit'[39m: [32m'1000'[39m,
+  [32m'x-ratelimit-remaining'[39m: [32m'996'[39m,
+  [32m'x-ratelimit-reset'[39m: [32m'1752219900'[39m,
+  [32m'cf-cache-status'[39m: [32m'DYNAMIC'[39m,
+  [32m'content-encoding'[39m: [32m'br'[39m,
+  [32m'cf-ray'[39m: [32m'95d6ad425b294c90-AMS'[39m,
+  [32m'alt-svc'[39m: [32m'h3=":443"; ma=86400'[39m
+}
+Body: {
+  userId: [33m1[39m,
+  id: [33m1[39m,
+  title: [32m'patched title'[39m,
+  body: [32m'quia et suscipit\n'[39m +
+    [32m'suscipit recusandae consequuntur expedita et cum\n'[39m +
+    [32m'reprehenderit molestiae ut ut quas totam\n'[39m +
+    [32m'nostrum rerum est autem sunt rem eveniet architecto'[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="API CRUD Operations (Robust) › PUT /posts/1 replaces a post" classname="api-crud.spec.ts" time="0.578">
+<system-out>
+<![CDATA[[API REQUEST] PUT /posts/1
+Body: { title: [32m'updated title'[39m, body: [32m'json file body'[39m, userId: [33m2[39m }
+[API RESPONSE] Status: 200
+Headers: {
+  date: [32m'Fri, 11 Jul 2025 07:44:39 GMT'[39m,
+  [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+  [32m'transfer-encoding'[39m: [32m'chunked'[39m,
+  connection: [32m'keep-alive'[39m,
+  [32m'access-control-allow-credentials'[39m: [32m'true'[39m,
+  [32m'cache-control'[39m: [32m'no-cache'[39m,
+  etag: [32m'W/"54-a1EAOUUTra85ufsrNAtHchQuUs0"'[39m,
+  expires: [32m'-1'[39m,
+  nel: [32m'{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'[39m,
+  pragma: [32m'no-cache'[39m,
+  [32m'report-to'[39m: [32m'{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=mMexIn4gx362ZCol7sup7vwb%2ByaIg1YyO83uWog%2FVfM%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1752219879"}],"max_age":3600}'[39m,
+  [32m'reporting-endpoints'[39m: [32m'heroku-nel="https://nel.heroku.com/reports?s=mMexIn4gx362ZCol7sup7vwb%2ByaIg1YyO83uWog%2FVfM%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1752219879"'[39m,
+  server: [32m'cloudflare'[39m,
+  vary: [32m'Origin, Accept-Encoding'[39m,
+  via: [32m'2.0 heroku-router'[39m,
+  [32m'x-content-type-options'[39m: [32m'nosniff'[39m,
+  [32m'x-powered-by'[39m: [32m'Express'[39m,
+  [32m'x-ratelimit-limit'[39m: [32m'1000'[39m,
+  [32m'x-ratelimit-remaining'[39m: [32m'995'[39m,
+  [32m'x-ratelimit-reset'[39m: [32m'1752219900'[39m,
+  [32m'cf-cache-status'[39m: [32m'DYNAMIC'[39m,
+  [32m'content-encoding'[39m: [32m'br'[39m,
+  [32m'cf-ray'[39m: [32m'95d6ad43ee974c90-AMS'[39m,
+  [32m'alt-svc'[39m: [32m'h3=":443"; ma=86400'[39m
+}
+Body: { title: [32m'updated title'[39m, body: [32m'json file body'[39m, userId: [33m2[39m, id: [33m1[39m }
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="api-example.spec.ts" timestamp="2025-07-11T07:44:35.858Z" hostname="API Tests" tests="1" failures="0" skipped="0" time="0.837" errors="0">
+<testcase name="Example API Test (Refactored) › GET /posts/1 returns valid post" classname="api-example.spec.ts" time="0.837">
+</testcase>
+</testsuite>
+<testsuite name="api-request-integration.spec.ts" timestamp="2025-07-11T07:44:35.858Z" hostname="API Tests" tests="2" failures="0" skipped="0" time="1.241" errors="0">
+<testcase name="POST /posts with body and headers" classname="api-request-integration.spec.ts" time="0.752">
+</testcase>
+<testcase name="POST /posts with body from JSON file" classname="api-request-integration.spec.ts" time="0.489">
+</testcase>
+</testsuite>
+<testsuite name="api-sample-utilities.spec.ts" timestamp="2025-07-11T07:44:35.858Z" hostname="API Tests" tests="1" failures="1" skipped="0" time="1.541" errors="0">
+<testcase name="Sample API Test with Utilities › GET /posts/1 returns valid post and logs details" classname="api-sample-utilities.spec.ts" time="1.541">
+<failure message="api-sample-utilities.spec.ts:32:7 GET /posts/1 returns valid post and logs details" type="FAILURE">
+<![CDATA[  [API Tests] › api-sample-utilities.spec.ts:32:7 › Sample API Test with Utilities › GET /posts/1 returns valid post and logs details 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: NaN
+    Received: 1
+
+      37 |     await validateJsonSchema(response, postSchema);
+      38 |     const data = await response.json();
+    > 39 |     expect(data.id).toBe(Number(testData.id));
+         |                     ^
+      40 |     expect(data.title).toBe(testData.title);
+      41 |   });
+      42 | });
+        at C:\Users\ravik\source\repos\VSCode\PlaywrightAPI\tests\api-sample-utilities.spec.ts:39:21
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: NaN
+    Received: 1
+
+      37 |     await validateJsonSchema(response, postSchema);
+      38 |     const data = await response.json();
+    > 39 |     expect(data.id).toBe(Number(testData.id));
+         |                     ^
+      40 |     expect(data.title).toBe(testData.title);
+      41 |   });
+      42 | });
+        at C:\Users\ravik\source\repos\VSCode\PlaywrightAPI\tests\api-sample-utilities.spec.ts:39:21
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\api-sample-utilities-Sampl-6cc2e-valid-post-and-logs-details-API-Tests-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\api-sample-utilities-Sampl-6cc2e-valid-post-and-logs-details-API-Tests-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[[API REQUEST] GET /posts/1
+[API RESPONSE] Status: 200
+Headers: {
+  date: [32m'Fri, 11 Jul 2025 07:44:37 GMT'[39m,
+  [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+  [32m'transfer-encoding'[39m: [32m'chunked'[39m,
+  connection: [32m'keep-alive'[39m,
+  [32m'access-control-allow-credentials'[39m: [32m'true'[39m,
+  [32m'cache-control'[39m: [32m'max-age=43200'[39m,
+  etag: [32m'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"'[39m,
+  expires: [32m'-1'[39m,
+  nel: [32m'{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'[39m,
+  pragma: [32m'no-cache'[39m,
+  [32m'report-to'[39m: [32m'{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=vMLQDCrZGG%2FeqOO24Kg6JqwuefguknYtj4nteHwc3n0%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1750218885"}],"max_age":3600}'[39m,
+  [32m'reporting-endpoints'[39m: [32m'heroku-nel="https://nel.heroku.com/reports?s=vMLQDCrZGG%2FeqOO24Kg6JqwuefguknYtj4nteHwc3n0%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1750218885"'[39m,
+  server: [32m'cloudflare'[39m,
+  vary: [32m'Origin, Accept-Encoding'[39m,
+  via: [32m'2.0 heroku-router'[39m,
+  [32m'x-content-type-options'[39m: [32m'nosniff'[39m,
+  [32m'x-powered-by'[39m: [32m'Express'[39m,
+  [32m'x-ratelimit-limit'[39m: [32m'1000'[39m,
+  [32m'x-ratelimit-remaining'[39m: [32m'999'[39m,
+  [32m'x-ratelimit-reset'[39m: [32m'1750218941'[39m,
+  age: [32m'13709'[39m,
+  [32m'cf-cache-status'[39m: [32m'HIT'[39m,
+  [32m'content-encoding'[39m: [32m'br'[39m,
+  [32m'cf-ray'[39m: [32m'95d6ad3d682a9df9-AMS'[39m,
+  [32m'alt-svc'[39m: [32m'h3=":443"; ma=86400'[39m
+}
+Body: {
+  userId: [33m1[39m,
+  id: [33m1[39m,
+  title: [32m'sunt aut facere repellat provident occaecati excepturi optio reprehenderit'[39m,
+  body: [32m'quia et suscipit\n'[39m +
+    [32m'suscipit recusandae consequuntur expedita et cum\n'[39m +
+    [32m'reprehenderit molestiae ut ut quas totam\n'[39m +
+    [32m'nostrum rerum est autem sunt rem eveniet architecto'[39m
+}
+[API REQUEST] GET /posts/1
+[API RESPONSE] Status: 200
+Headers: {
+  date: [32m'Fri, 11 Jul 2025 07:44:39 GMT'[39m,
+  [32m'content-type'[39m: [32m'application/json; charset=utf-8'[39m,
+  [32m'transfer-encoding'[39m: [32m'chunked'[39m,
+  connection: [32m'keep-alive'[39m,
+  [32m'access-control-allow-credentials'[39m: [32m'true'[39m,
+  [32m'cache-control'[39m: [32m'max-age=43200'[39m,
+  etag: [32m'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"'[39m,
+  expires: [32m'-1'[39m,
+  nel: [32m'{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'[39m,
+  pragma: [32m'no-cache'[39m,
+  [32m'report-to'[39m: [32m'{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=vMLQDCrZGG%2FeqOO24Kg6JqwuefguknYtj4nteHwc3n0%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1750218885"}],"max_age":3600}'[39m,
+  [32m'reporting-endpoints'[39m: [32m'heroku-nel="https://nel.heroku.com/reports?s=vMLQDCrZGG%2FeqOO24Kg6JqwuefguknYtj4nteHwc3n0%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1750218885"'[39m,
+  server: [32m'cloudflare'[39m,
+  vary: [32m'Origin, Accept-Encoding'[39m,
+  via: [32m'2.0 heroku-router'[39m,
+  [32m'x-content-type-options'[39m: [32m'nosniff'[39m,
+  [32m'x-powered-by'[39m: [32m'Express'[39m,
+  [32m'x-ratelimit-limit'[39m: [32m'1000'[39m,
+  [32m'x-ratelimit-remaining'[39m: [32m'999'[39m,
+  [32m'x-ratelimit-reset'[39m: [32m'1750218941'[39m,
+  age: [32m'13711'[39m,
+  [32m'cf-cache-status'[39m: [32m'HIT'[39m,
+  [32m'content-encoding'[39m: [32m'br'[39m,
+  [32m'cf-ray'[39m: [32m'95d6ad498d3cb8f7-AMS'[39m,
+  [32m'alt-svc'[39m: [32m'h3=":443"; ma=86400'[39m
+}
+Body: {
+  userId: [33m1[39m,
+  id: [33m1[39m,
+  title: [32m'sunt aut facere repellat provident occaecati excepturi optio reprehenderit'[39m,
+  body: [32m'quia et suscipit\n'[39m +
+    [32m'suscipit recusandae consequuntur expedita et cum\n'[39m +
+    [32m'reprehenderit molestiae ut ut quas totam\n'[39m +
+    [32m'nostrum rerum est autem sunt rem eveniet architecto'[39m
+}
+
+[[ATTACHMENT|api-sample-utilities-Sampl-6cc2e-valid-post-and-logs-details-API-Tests-retry1\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
